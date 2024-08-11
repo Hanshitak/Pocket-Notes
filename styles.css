@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 #app {
     display: flex;
     height: 100vh;
@@ -24,7 +23,6 @@ body {
 
 #group-list {
     list-style: circle;
-    
     padding: 0;
     margin: 20px;
 }
@@ -153,7 +151,6 @@ footer img {
     left: 20px;
 }
 #java-notes {
-   
     width: 100%;
     height: 100px;
     padding: 10px;
