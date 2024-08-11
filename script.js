@@ -1,4 +1,4 @@
-// Get references to DOM elements
+//lets start
 const groupItems = document.querySelectorAll('.group-item');
 const mainContent = document.getElementById('main-content');
 const stickyAddBtn = document.getElementById('sticky-add-btn');
@@ -7,19 +7,16 @@ const saveGroupBtn = document.getElementById('save-group-btn');
 const groupList = document.getElementById('group-list');
 const myNotes = document.getElementById('my-notes');
 
-// Add click event listener to each group item
 groupItems.forEach((item) => {
     item.addEventListener('click', () => {
         mainContent.innerHTML = `<h2>${item.textContent} Notes</h2><p>This is the content for the ${item.textContent} group.</p>`;
     });
 });
 
-// Show popup to create a new group
 stickyAddBtn.addEventListener('click', () => {
     groupPopup.style.display = 'flex';
 });
 
-// Save new group and add it to the group list
 saveGroupBtn.addEventListener('click', () => {
     const groupName = document.getElementById('new-group-name').value;
     const groupColor = document.getElementById('group-color-picker').value;
@@ -29,7 +26,7 @@ saveGroupBtn.addEventListener('click', () => {
         newGroupItem.className = 'group-item';
         newGroupItem.textContent = groupName;
         newGroupItem.style.backgroundColor = groupColor;
-        newGroupItem.style.color = "#fff"; // Ensure text is readable
+        newGroupItem.style.color = "#fff"; 
         groupList.appendChild(newGroupItem);
 
         newGroupItem.addEventListener('click', () => {
@@ -40,15 +37,12 @@ saveGroupBtn.addEventListener('click', () => {
         document.getElementById('new-group-name').value = '';
     }
 });
-
-// Close the popup if clicked outside the content area
 groupPopup.addEventListener('click', (e) => {
     if (e.target === groupPopup) {
         groupPopup.style.display = 'none';
     }
 });
 
-// Display Java notes when "My Notes" is clicked
 myNotes.addEventListener('click', () => {
     mainContent.innerHTML = `
         <div class="java-notes-container">
@@ -70,7 +64,6 @@ myNotes.addEventListener('click', () => {
         </div>
     `;
 
-    // Add functionality to "Add" button
     const addNoteBtn = document.getElementById('add-note-btn');
     const javaNotesTextarea = document.getElementById('java-notes');
     const javaContent = document.getElementById('java-content');
