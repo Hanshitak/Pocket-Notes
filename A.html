@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Notes</title>
+    <link rel="stylesheet" href="B.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Sidebar with group list -->
+        <div id="sidebar">
+            <h2>Pocket Notes</h2>
+            <ul id="group-list">
+                <li class="group-item" id="my-notes">My Notes</li>
+                <li class="group-item">My personal grp</li>
+                <li class="group-item">Javascript grp</li>
+                <li class="group-item">HTML grp</li>
+                <li class="group-item">CSS Notes</li>
+                <li class="group-item">SQL Notes</li>
+                <li class="group-item">Python Notes</li>
+            </ul>
+        </div>
+
+        <!-- Main content area -->
+        <div id="main-content">
+            <div class="content-wrapper">
+                <img src="12.png" alt="Pocket Notes Illustration" class="main-image">
+                <h2>Pocket Notes</h2>
+                <p>Send and receive messages without keeping your phone online. Use Pocket Notes on up to 4 linked devices and 1 mobile phone.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Add Button -->
+    <button id="sticky-add-btn">+</button>
+
+    <!-- Popup for creating a new group -->
+    <div id="group-popup" class="popup">
+        <div class="popup-content">
+            <h3>Create New Group</h3>
+            <input type="text" id="new-group-name" placeholder="Enter group name">
+            <div class="color-picker">
+                <label>Choose color:</label>
+                <input type="color" id="group-color-picker" value="#ff0000">
+            </div>
+            <button id="save-group-btn">Save Group</button>
+        </div>
+    </div>
+
+    <footer>
+        <img src="lock.webp" alt="">
+        end-to-end encrypted
+    </footer>
+    <script src="C.js"></script>
+</body>
+</html>
